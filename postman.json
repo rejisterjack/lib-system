@@ -1,0 +1,381 @@
+{
+  "info": {
+    "name": "Library Management API",
+    "_postman_id": "12345-67890-abcdef",
+    "description": "Postman collection for Library Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Seed Database",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/seed-db",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["seed-db"]
+        }
+      }
+    },
+    {
+      "name": "Create Author",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Author Name\",\n  \"birthdate\": \"YYYY-MM-DD\",\n  \"email\": \"author@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/authors",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors"]
+        }
+      }
+    },
+    {
+      "name": "Get Authors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/authors",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors"]
+        }
+      }
+    },
+    {
+      "name": "Get Author By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/authors/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Update Author",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Author Name\",\n  \"birthdate\": \"YYYY-MM-DD\",\n  \"email\": \"updatedauthor@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/authors/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete Author",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/authors/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Create Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Book Title\",\n  \"description\": \"Book Description\",\n  \"publicationYear\": 2023,\n  \"authorId\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Get Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books"]
+        }
+      }
+    },
+    {
+      "name": "Get Book By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Book Title\",\n  \"description\": \"Updated Book Description\",\n  \"publicationYear\": 2023,\n  \"authorId\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Create Genre",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Genre Name\",\n  \"description\": \"Genre Description\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/genres",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres"]
+        }
+      }
+    },
+    {
+      "name": "Get Genres",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/genres",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres"]
+        }
+      }
+    },
+    {
+      "name": "Get Genre By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/genres/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Update Genre",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Updated Genre Name\",\n  \"description\": \"Updated Genre Description\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/genres/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Delete Genre",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/genres/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres", ":id"]
+        }
+      }
+    },
+    {
+      "name": "Get Authors By Genre",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/genres/:genreId/authors",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres", ":genreId", "authors"]
+        }
+      }
+    },
+    {
+      "name": "Get Books By Author ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/authors/:authorId/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["authors", ":authorId", "books"]
+        }
+      }
+    },
+    {
+      "name": "Get Books By Genre",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/genres/:genreId/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["genres", ":genreId", "books"]
+        }
+      }
+    },
+    {
+      "name": "Add Genres To Book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"genreIds\": [1, 2]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/:bookId/genres",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":bookId", "genres"]
+        }
+      }
+    },
+    {
+      "name": "Remove Genres From Book",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/:bookId/genres",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":bookId", "genres"]
+        }
+      }
+    },
+    {
+      "name": "Get Genres By Book ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/:bookId/genres",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ":bookId", "genres"]
+        }
+      }
+    }
+  ]
+}
