@@ -1,6 +1,7 @@
 const express = require("express")
 const { sequelize } = require("./lib/sequelize")
 const {
+  seedDatabase,
   createAuthor,
   getAuthors,
   getAuthorById,
