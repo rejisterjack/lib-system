@@ -1,5 +1,5 @@
 const express = require("express")
-const { sequelize } = require("./lib/sequelize")
+
 const {
   seedDatabase,
   createAuthor,
@@ -26,6 +26,7 @@ const {
 } = require("./controller/libController")
 
 const app = express()
+app.use(express.json())
 
 const PORT = 3000
 
@@ -68,16 +69,7 @@ app.post("/books/:bookId/genres", addGenresToBook)
 app.delete("/books/:bookId/genres", removeGenresFromBook)
 app.get("/books/:bookId/genres", getGenresByBookId)
 
-sequelize
-  .sync({
-    force: true,
-  })
-  .then(() => {
-    console.log("Database & tables created!")
-    app.listen(PORT, () => {
-      console.log(`Server is running on http://localhost:${PORT}`)
-    })
-  })
-  .catch((error) => {
-    console.error("Error starting server: ", error)
-  })
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`)
+})
+
